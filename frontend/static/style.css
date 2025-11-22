@@ -1,0 +1,142 @@
+/* -------------------------------------
+    GLOBAL PAGE STYLING
+-------------------------------------- */
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f0f4ff;
+    color: #222;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+
+/* -------------------------------------
+    NAVBAR
+-------------------------------------- */
+
+.navbar {
+    width: 100%;
+    padding: 18px 30px;
+    background: #0066ff;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.navbar h2 {
+    font-weight: 600;
+}
+
+.nav-links a {
+    margin-left: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* -------------------------------------
+    PAGE WRAPPER
+-------------------------------------- */
+
+.page-container {
+    padding: 40px;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* -------------------------------------
+    BUTTONS
+-------------------------------------- */
+
+.btn, button {
+    background: #0066ff;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.btn:hover, button:hover {
+    background: #0053cc;
+}
+
+/* -------------------------------------
+    FACULTY CARD
+-------------------------------------- */
+
+.faculty-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: left;
+    margin-bottom: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+/* -------------------------------------
+    INPUT FIELDS
+-------------------------------------- */
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* -------------------------------------
+    UTILITY BOXES
+-------------------------------------- */
+
+.section-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 25px auto;
+    width: 80%;
+    box-shadow: 0 0 25px rgba(0,0,0,0.1);
+}
+
+#detectedBox {
+    width: 600px;
+    margin: 25px auto;
+    text-align: left;
+}
+
+.count-badge {
+    padding: 8px 15px;
+    background: #0066ff;
+    color: white;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* -------------------------------------
+    LOADERS
+-------------------------------------- */
+
+.loading {
+    font-size: 18px;
+    color: gray;
+}

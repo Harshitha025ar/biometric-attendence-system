@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attendance Reports</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+    <style>
+        .report-box {
+            width: 90%;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.1);
+            margin-top: 30px;
+        }
+
+        .report-section {
+            margin-bottom: 30px;
+        }
+
+        .count-badge {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #008cff;
+            color: white;
+            border-radius: 25px;
+            margin-left: 10px;
+        }
+
+        .report-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .report-table th, .report-table td {
+            padding: 12px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        .report-table th {
+            background: #0066ff;
+            color: white;
+        }
+
+        .report-table tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <h2>Attendance Reports</h2>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/register">Register Faculty</a>
+    </div>
+</div>
+
+<div class="page-container">
+    <h1 class="page-title">Today's Attendance Summary</h1>
+
+    <div class="report-box">
+
+        <!-- PRESENT TABLE -->
+        <div class="report-section">
+            <h3>Present Faculty 
+                <span class="count-badge" id="presentCount">0</span>
+            </h3>
+
+            <table class="report-table">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Date</th>
+                    <th>Arrival Time</th>
+                    <th>Status</th>
+                    <th>Late (min)</th>
+                </tr>
+                </thead>
+                <tbody id="presentList">
+                    <tr><td colspan="6">Loading...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <hr>
+
+        <!-- ABSENT TABLE -->
+        <div class="report-section">
+            <h3>Absent Faculty 
+                <span class="count-badge" id="absentCount">0</span>
+            </h3>
+
+            <table class="report-table">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Department</th>
+                </tr>
+                </thead>
+                <tbody id="absentList">
+                    <tr><td colspan="2">Loading...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/static/main.js"></script>
+<script>
+    loadReport();
+</script>
+
+</body>
+</html>
